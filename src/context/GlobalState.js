@@ -10,7 +10,6 @@ const initialState = {
   watched: localStorage.getItem("watched")
     ? JSON.parse(localStorage.getItem("watched"))
     : [],
-  watched: [],
 };
 
 // create context

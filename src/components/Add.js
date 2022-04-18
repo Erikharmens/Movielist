@@ -40,7 +40,7 @@ export const Add = () => {
             <ul className="results">
               {results.map((movie) => (
                 <li key={movie.id}>
-                  <ResultCard movie={movie}/>
+                  <ResultCard movie={movie} />
                 </li>
               ))}
             </ul>
