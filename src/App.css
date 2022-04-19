@@ -1,15 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=K2D&display=swap');
 
 :root {
   --primary: #032541;
-  --secondary: #21d07a;
-  --white: #fff;
+  --secondary: #d9aa4d;
+  --white: #e9e9e9;
 }
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Mada', sans-serif;  
   padding: 0;
   margin: 0;
+  background-color: #e9e9e9;
 }
 
 .container {
@@ -65,7 +66,7 @@ body {
 
 .btn:disabled {
   pointer-events: none;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 input:focus {
@@ -75,6 +76,14 @@ input:focus {
 /* Header Styles */
 header {
   background-color: var(--primary);
+}
+
+.header-1 {
+  padding-bottom: 24px;
+  color: var(--primary);
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Mada', sans-serif;
 }
 
 header .inner-content {
@@ -124,6 +133,10 @@ header .nav-links li:last-child {
   margin: 0 auto;
 }
 
+.input-wrapper {
+  display: flex;
+}
+
 .add-content .input-wrapper input {
   width: 100%;
   background-color: var(--primary);
@@ -146,17 +159,17 @@ header .nav-links li:last-child {
 
 .result-card {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .result-card .poster-wrapper img,
 .filler-poster {
-  width: 75px;
-  height: 113px;
+  width: 80px;
+  height: 120px;
   background: rgb(20,65,126);
   background: linear-gradient(135deg, rgba(20,65,126,1) 0%, rgba(9,9,121,1) 41%, rgba(66,161,181,1) 100%);
-  border-radius: 5px;
-  margin-right: 15px;
+  border-radius: 4px;
+  margin-right: 16px;
   display: block;
   color: transparent;
 }
@@ -199,12 +212,12 @@ header .nav-links li:last-child {
 
 .count-pill {
   display: block;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   padding: 5px 15px;
-  font-size: 1.125rem;
-  font-weight: 600;
-  border-radius: 999px;
-  color: var(--primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 4px;
+  color: var(--white);
 }
 
 .movie-page .heading {
@@ -245,23 +258,21 @@ header .nav-links li:last-child {
   width: 100%;
   height: 100%;
   border: 2px solid transparent;
-  transition: all 0.3s ease;
 }
 
 .movie-card:hover .overlay {
-  border: 3px solid var(--secondary);
+  border: 3px solid var(--primary);
 }
 
 .movie-card .inner-card-controls {
   display: inline;
-  background-color: red;
   position: absolute;
-  bottom: 20px;
+  bottom: 32px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 5px;
-  padding: 3px;
+  background: var(--primary);
+  border-radius: 4px;
+  padding: 4px;
   opacity: 0;
   transition: all 0.3s ease;
 }
@@ -270,14 +281,31 @@ header .nav-links li:last-child {
   opacity: 1;
 }
 
+.search-btn {
+  display: flex;
+  padding: 16px;
+  margin: 0 0 0 8px;
+  align-items: center;
+  color: var(--white);
+  background-color: var(--primary);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.search-btn:hover {
+  background-color: #4257df;
+}
+
 .ctrl-btn {
   color: #fefefe;
   background-color: transparent;
   border: none;
   transition: all 0.3s ease;
   font-size: 1.25rem;
-  padding: 5px;
-  margin: 0;
+  padding: 8px;
+  margin: 4px;
 }
 
 .ctrl-btn:hover {

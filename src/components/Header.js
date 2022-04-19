@@ -18,7 +18,7 @@ export const Header = () => {
                           <Link to ="/watched">Watched</Link>
                       </li>
                       <li>
-                          <Link to ="/add">+ Add</Link>
+                          <Link to ="/add" className='btn'>+ Add</Link>
                       </li>
                   </ul>
               </div>          

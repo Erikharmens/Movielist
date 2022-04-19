@@ -14,14 +14,15 @@ export const MovieControls = ({ movie, type }) => {
       {type === "watchlist" && (
         <>
           <button className="ctrl-btn" onClick={() => addMovieToWatched(movie)}>
-            <p>Seen</p>
+          <i className="fa-solid fa-eye"></i>
           </button>
+          
 
           <button
             className="ctrl-btn"
             onClick={() => removeMovieFromWatchlist(movie.id)}
           >
-            <p>X</p>
+            <i className="fa-solid fa-circle-xmark"></i>
           </button>
         </>
       )}
@@ -29,16 +30,14 @@ export const MovieControls = ({ movie, type }) => {
       {type === "watched" && (
         <>
           <button className="ctrl-btn" onClick={() => moveToWatchlist(movie)}>
-            <p>Remove</p>
+          <i className="fa-solid fa-eye-slash"></i>
           </button>
 
           <button className="ctrl-btn" onClick={() => removeFromWatched(movie.id)}>
-            <p>X</p>
+          <i className="fa-solid fa-circle-xmark"></i>
           </button>
         </>
       )}
     </div>
   );
 };
-
-// https://youtu.be/1eO_hNYzaSc?t=4035 //

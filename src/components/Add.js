@@ -21,19 +21,26 @@ export const Add = () => {
           setResults([]);
         }
       });
-  };
+
+    };
+    const clearInput = () => {
+      setQuery([]);
+      setResults("");
+    }
 
   return (
     <div className="add-page">
       <div className="container">
         <div className="add-content">
+          <h1 className="header-1">Search for movies and add them to your lists</h1>
           <div className="input-wrapper">
             <input
               type="text"
-              placeholder="Search for movies"
+              placeholder="Search movies..."
               value={query}
               onChange={onChange}
             />
+            <button className="search-btn" onClick={clearInput}><i class="fa-solid fa-xmark"></i></button>
           </div>
 
           {results.length > 0 && (
@@ -47,7 +54,6 @@ export const Add = () => {
           )}
         </div>
       </div>
-      <h1>Add page</h1>
     </div>
   );
 };

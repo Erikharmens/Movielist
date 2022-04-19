@@ -10,6 +10,9 @@ export const Watched = () => {
     <div className="container">
       <div className="header">
         <h1 className="heading">Watched movies</h1>
+        <span className="count-pill">
+           {watched.length} {watched.length === 1 ? "Movie" : "Movies"}
+          </span>
       </div>
 
       {watched.length > 0 ? (
@@ -19,7 +22,7 @@ export const Watched = () => {
           ))}
         </div>
       ) : (
-        <h2 className="no-movies">No movies in list, add some!</h2>
+        <h2 className="no-movies">No movies in list, go watch some!</h2>
       )}
     </div>
   </div>
